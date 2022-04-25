@@ -60,3 +60,39 @@
     50% { bottom: 30%; left: 50%; opacity: 1 }
     100% { bottom: 100%; left: 90%; opacity: 0 }
 }
+
+@keyframes fishbubbles {
+    to {
+        transform: translateX(250px)
+    }
+}
+
+@keyframes fishswim {
+    to {
+        transform: translateX(250px)
+    }
+
+}
+
+@keyframes octopusbubbles {
+    to {
+        transform: translateY(-250px)
+    }
+}
+
+@keyframes octopusflap {
+    to {
+        transform: translateY(-250px)
+    }
+}
+
+@keyframes algaewave {
+        from {
+            transform: rotate(1deg);
+        }
+        to {
+            transform: rotate(-1deg);
+           }
+
+}
+
