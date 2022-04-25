@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&family=Public+Sans:wght@300;400&display=swap");
-*, body {
+
+@font-face {
+    font-family: Open-Sans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Open-Sans-italic;
+    src: url(../fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -11,6 +27,14 @@
   --sun: yellow;
   --cloud-one: rgb(165, 165, 165);
   --cloud-two: lightgrey;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 @-webkit-keyframes wave {
@@ -482,28 +506,7 @@
           animation: bubbleThree 3.5s linear infinite;
 }
 
-@font-face {
-    font-family: Open-Sans;
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
 
-@font-face {
-    font-family: Open-Sans-italic;
-    src: url(../fonts/OpenSans-Italic.ttf);
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../fonts/Montserrat-Bold.ttf);
-}
-
-html {
-    font-size: 16px;
-}
-
-body {
-    overflow-x: hidden;
-}
 
 #fishmain {
     background-color: var(--first-water-color);
