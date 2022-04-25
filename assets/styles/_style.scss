@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&family=Public+Sans:wght@300;400&display=swap');
+
+.vegard {
+    display: flex;
+    flex-direction: column;
+    ::selection {
+        outline: #000;
+    }
+    p {
+        font-size: 4rem;
+        position: absolute;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &__sky {
+        height: 115vh;
+        width: 100%;
+        background-color: var(--sky-day);
+        position: relative;
+        overflow: hidden;
+        
+
+        p {
+            top: 6em;
+            left: 25%;
+            max-width: 700px;
+        }
+
+        .cloud {
+            transition: transform 12s;
+            position: absolute;
+            width: 12em;
+            height: 5em;
+            border-radius: 5em;
+            background-color: var(--cloud-one);
+            z-index: 10;
+            opacity: 0.6;
+        }
+        
+        &--cloud-one {left: 50%;top: 10em;
+            margin-left: 3%;
+        }
+        &--cloud-two {
+            left: 50%;top: 13em;
+        }
+        &--cloud-three{left: 40%; top: 18em;}
+        &--cloud-four{left: 20%;top: 40em;}
+        &--cloud-five{left: 40%;top: 30em;}
+        &--cloud-six{left: 60%;top: 35em;}
+        &--cloud-seven{left: 20%;top: 0em;}
+        &--cloud-eight{left: 70%;top: 43em;}
+        &--cloud-nine{left: 90%;top: 24em;}
+        &--cloud-ten{left: 30%;top: 60em;}
+
+        .move {
+            transform: translateX(-100%);
+        }
+        
+        &--sun {
+            height: 10em;
+            width: 10em;
+            border-radius: 50%;
+            background-color: var(--sun);
+            left: 50%;
+            top: 8em;
+            position: relative;
+            box-shadow: 0px 0px 56px 0px var(--sun);
+        }
+
+
+    }
+    &__water {
+        width: 100%;
+        height: 200vh;
+        position: relative;
+        
+
+       &--top {
+           position: absolute;
+           top: 0;
+           width: 100%;
+           height: 25em;
+           background-color: var(--water-top);
+       }
+
+       &--bottom {
+            background-image: linear-gradient(var(--water-top), rgb(52, 52, 250));
+            position: absolute;
+            top: 25em;  
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden;
+            p {
+                top: 19.5em;
+                left: 10%;
+            }
+        }
+
+        #wave-contaigner {
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: -5em;
+            transform: rotate(180deg);
+        }
+
+        &--wave {
+            position: relative; 
+            display: inline;
+            width: 200%;
+            top: -3em;
+            z-index: 10;
+            fill:#4C7DDC;
+            animation: wave linear 5s infinite;
+            
+            align-items: center;
+        }
+
+        
+
+        &--boat {
+            width: 40em;
+            max-width: 100%;
+            position: absolute; 
+            top: -14em;
+            left: 10%;
+            transform: translate(-50%, -100%);
+            z-index: 11;
+            animation: boat ease-in-out 2.5s infinite alternate;
+            
+        }
+
+        &--fish {
+            width: 30em;
+            position: absolute;
+            top: 70em;
+            left: -28em;
+            animation: swim 12s linear infinite;
+            #finn {
+                animation: lowerfinn ease-out 1s alternate infinite;
+                transform-origin: top;
+                transform-box: fill-box;
+            }
+
+            #butt {
+                animation: back 0.5s ease-in-out alternate infinite;
+                transform-origin: right;
+                transform-box: fill-box;
+                
+            }
+            .bubble-wrapper {
+                width: 100px;
+                height: 150px;
+                position: absolute;
+                left: 23em;
+                top: 0;
+                &>div {
+                  background-color: #FFF;
+                  position: absolute;
+                  border-radius: 50px;
+                }
+                .bubble-1 {
+                  width: 10px;
+                  height: 10px;
+                  bottom: 0;
+                  left: 15px;
+                  animation: bubbleOne 4s linear infinite;
+                }
+                .bubble-2 {
+                  width: 12px;
+                  height: 12px;
+                  bottom: 10px;
+                  left: 25px;
+                  animation: bubbleTwo 2s linear infinite;
+                }
+                .bubble-3 {
+                  width: 8px;
+                  height: 8px;
+                  bottom: 30px;
+                  left: 5px;
+                  animation: bubbleThree 3.5s linear infinite;
+                }
+              }
+        }
+    }
+
+}
+
