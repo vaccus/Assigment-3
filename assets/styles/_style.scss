@@ -134,7 +134,7 @@
         &--fish {
             width: 30em;
             position: absolute;
-            top: 70em;
+            top: 60em;
             left: -28em;
             animation: swim 12s linear infinite;
             #finn {
@@ -184,6 +184,174 @@
               }
         }
     }
+
+}
+
+.vetle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    &-fishcontainer {
+        background-color: var(--first-water-color);
+        height: 115vh;
+        width: 100%;
+    }
+
+    &-fishbubbles {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        left: 500px;
+        top: 660px;
+        animation: fishswim linear 10s infinite;
+
+        &>div {
+            background-color: #FFF;
+            position: absolute;
+            border-radius: 50px;
+          }
+
+        .fishbubble1 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble1 4s linear infinite;
+          }
+
+          .fishbubble2 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble2 4s linear infinite;
+          }
+
+          .fishbubble3 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble3 4s linear infinite;
+          }
+    }
+
+    &-fish {
+        position: relative;
+        width: 392px;
+        height: 196px;
+        left: 140px;
+        top: 527px;
+        animation: fishswim 10s linear infinite;
+    }
+
+    &-octopuscontainer {
+        display: grid;
+        background-color: var(--second-water-color);
+        height: 115vh;
+        width: 100%;
+    }
+    
+    p {
+        grid-column: 3;
+        grid-row: 2;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        max-width: 25ch;
+        align-items: center;
+    }
+    
+    &-octopusbubbles {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        left: 225px;
+        animation: octopusbubbles 3s;
+
+        &>div {
+            background-color: #FFF;
+            position: absolute;
+            border-radius: 50px;
+        }
+
+        .octopusbubble1 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble1 4s linear infinite;
+          }
+
+          .octopusbubble2 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble2 4s linear infinite;
+          }
+
+          .octopusbubble3 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: fishbubble3 4s linear infinite;
+          }
+
+          .octopusbubble4 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: octopusbubble1 4s linear infinite;
+          }
+
+          .octopusbubble5 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: octopusbubble2 4s linear infinite;
+          }
+
+          .octopusbubble6 {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 15px;
+            animation: octopusbubble3 4s linear infinite;
+          }
+    }
+
+    &-octopus {
+        position: relative;
+        width: 456.82px;
+        height: 462.92px;
+        right: 450px;
+        top: 325px;
+        animation: octopusflap 4s linear infinite;
+    }
+
+    &-algaemain {
+        display: grid;
+        background-color: var(--third-water-color);
+        height: 115vh;
+        width: 100%;
+        overflow: hidden;
+    }   
+
+    &-algae {
+        position: relative;
+        width: 1000px;
+        height: 750px;
+        justify-self: center;
+        bottom: -550px;
+        animation: algaewave 3s infinite;
+        animation-direction: alternate;
+    }
+    
 
 }
 
