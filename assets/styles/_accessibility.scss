@@ -1,11 +1,11 @@
 @media (prefers-reduced-motion) {
-    .vetle {
+    .vetle > .vetle-fishcontainer {
         animation: none;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    .vetle {
+    .vetle > .vetle-fishcontainer {
         background-color: var(--dark-mode-color);
     }
 }
