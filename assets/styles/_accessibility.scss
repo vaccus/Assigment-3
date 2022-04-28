@@ -1,11 +1,11 @@
 @media (prefers-reduced-motion) {
-    #fishbubbles, #fish, #octopusbubbles, #octopus {
+    .vetle {
         animation: none;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    #fishmain, #octopusmain, #algaemain {
-        background: darkblue;
+    .vetle {
+        background-color: var(--dark-mode-color);
     }
 }
