@@ -1,20 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&family=Public+Sans:wght@300;400&display=swap");
-
-@font-face {
-    font-family: Open-Sans;
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
-
-@font-face {
-    font-family: Open-Sans-italic;
-    src: url(../fonts/OpenSans-Italic.ttf);
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../fonts/Montserrat-Bold.ttf);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -27,126 +11,103 @@
   --sun: yellow;
   --cloud-one: rgb(165, 165, 165);
   --cloud-two: lightgrey;
+  --first-water-color: #94BFFF;
+  --second-water-color: #434AFF;
+  --third-water-color: #202F88;
+  --dark-mode-color: #00008b;
 }
 
-html {
-    font-size: 16px;
+@media (prefers-reduced-motion) {
+  .vetle {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
-
-body {
-    overflow-x: hidden;
+@media (prefers-color-scheme: dark) {
+  .vetle {
+    background-color: var(--dark-mode-color);
+  }
 }
-
 @-webkit-keyframes wave {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
-
 @keyframes wave {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
-
 @-webkit-keyframes boat {
   0% {
-    -webkit-transform: rotateZ(-2deg) translateY(0);
-            transform: rotateZ(-2deg) translateY(0);
+    transform: rotateZ(-2deg) translateY(0);
   }
   100% {
-    -webkit-transform: rotateZ(2deg) translatey(2em);
-            transform: rotateZ(2deg) translatey(2em);
+    transform: rotateZ(2deg) translatey(2em);
   }
 }
-
 @keyframes boat {
   0% {
-    -webkit-transform: rotateZ(-2deg) translateY(0);
-            transform: rotateZ(-2deg) translateY(0);
+    transform: rotateZ(-2deg) translateY(0);
   }
   100% {
-    -webkit-transform: rotateZ(2deg) translatey(2em);
-            transform: rotateZ(2deg) translatey(2em);
+    transform: rotateZ(2deg) translatey(2em);
   }
 }
-
 @-webkit-keyframes lowerfinn {
   0% {
-    -webkit-transform: rotateX(20deg);
-            transform: rotateX(20deg);
+    transform: rotateX(20deg);
   }
   100% {
-    -webkit-transform: rotateX(110deg);
-            transform: rotateX(110deg);
+    transform: rotateX(110deg);
   }
 }
-
 @keyframes lowerfinn {
   0% {
-    -webkit-transform: rotateX(20deg);
-            transform: rotateX(20deg);
+    transform: rotateX(20deg);
   }
   100% {
-    -webkit-transform: rotateX(110deg);
-            transform: rotateX(110deg);
+    transform: rotateX(110deg);
   }
 }
-
 @-webkit-keyframes back {
   0% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
   100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
 }
-
 @keyframes back {
   0% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
   100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
 }
-
 @-webkit-keyframes swim {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(180vw);
-            transform: translateX(180vw);
+    transform: translateX(100vw);
   }
 }
-
 @keyframes swim {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(180vw);
-            transform: translateX(180vw);
+    transform: translateX(100vw);
   }
 }
-
 @-webkit-keyframes bubbleOne {
   0% {
     bottom: 0;
@@ -164,7 +125,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes bubbleOne {
   0% {
     bottom: 0;
@@ -182,7 +142,6 @@ body {
     opacity: 0;
   }
 }
-
 @-webkit-keyframes bubbleTwo {
   0% {
     bottom: 10px;
@@ -200,7 +159,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes bubbleTwo {
   0% {
     bottom: 10px;
@@ -218,7 +176,6 @@ body {
     opacity: 0;
   }
 }
-
 @-webkit-keyframes bubbleThree {
   0% {
     bottom: 30px;
@@ -236,7 +193,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes bubbleThree {
   0% {
     bottom: 30px;
@@ -254,31 +210,283 @@ body {
     opacity: 0;
   }
 }
-
-.vegard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@-webkit-keyframes fishbubble1 {
+  0% {
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    left: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 80%;
+    opacity: 0;
+  }
 }
-
+@keyframes fishbubble1 {
+  0% {
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    left: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fishbubble2 {
+  0% {
+    bottom: 10px;
+    left: 5px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    left: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+@keyframes fishbubble2 {
+  0% {
+    bottom: 10px;
+    left: 5px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    left: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fishbubble3 {
+  0% {
+    bottom: 30px;
+    left: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 30%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+@keyframes fishbubble3 {
+  0% {
+    bottom: 30px;
+    left: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 30%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes octopusbubble1 {
+  0% {
+    bottom: 0;
+    right: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    right: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    right: 80%;
+    opacity: 0;
+  }
+}
+@keyframes octopusbubble1 {
+  0% {
+    bottom: 0;
+    right: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    right: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    right: 80%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes octopusbubble2 {
+  0% {
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    right: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    right: 90%;
+    opacity: 0;
+  }
+}
+@keyframes octopusbubble2 {
+  0% {
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    right: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    right: 90%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes octopusbubble3 {
+  0% {
+    bottom: 30px;
+    right: 25px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 30%;
+    right: 50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    right: 90%;
+    opacity: 0;
+  }
+}
+@keyframes octopusbubble3 {
+  0% {
+    bottom: 30px;
+    right: 25px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 30%;
+    right: 50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    right: 90%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fishswim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes fishswim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@-webkit-keyframes octopusbubbles {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-250px);
+  }
+}
+@keyframes octopusbubbles {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-250px);
+  }
+}
+@-webkit-keyframes octopusflap {
+  to {
+    transform: translateY(-250px);
+  }
+}
+@keyframes octopusflap {
+  to {
+    transform: translateY(-250px);
+  }
+}
+@-webkit-keyframes algaewave {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
+}
+@keyframes algaewave {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
+}
+.vegard {
+  display: flex;
+  flex-direction: column;
+}
 .vegard ::-moz-selection {
   outline: #000;
 }
-
 .vegard ::selection {
   outline: #000;
 }
-
 .vegard p {
   font-size: 4rem;
   position: absolute;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 .vegard__sky {
   height: 115vh;
   width: 100%;
@@ -286,18 +494,13 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .vegard__sky p {
   top: 6em;
   left: 25%;
   max-width: 700px;
 }
-
 .vegard__sky .cloud {
-  -webkit-transition: -webkit-transform 12s;
-  transition: -webkit-transform 12s;
   transition: transform 12s;
-  transition: transform 12s, -webkit-transform 12s;
   position: absolute;
   width: 12em;
   height: 5em;
@@ -306,63 +509,50 @@ body {
   z-index: 10;
   opacity: 0.6;
 }
-
 .vegard__sky--cloud-one {
   left: 50%;
   top: 10em;
   margin-left: 3%;
 }
-
 .vegard__sky--cloud-two {
   left: 50%;
   top: 13em;
 }
-
 .vegard__sky--cloud-three {
   left: 40%;
   top: 18em;
 }
-
 .vegard__sky--cloud-four {
   left: 20%;
   top: 40em;
 }
-
 .vegard__sky--cloud-five {
   left: 40%;
   top: 30em;
 }
-
 .vegard__sky--cloud-six {
   left: 60%;
   top: 35em;
 }
-
 .vegard__sky--cloud-seven {
   left: 20%;
   top: 0em;
 }
-
 .vegard__sky--cloud-eight {
   left: 70%;
   top: 43em;
 }
-
 .vegard__sky--cloud-nine {
   left: 90%;
   top: 24em;
 }
-
 .vegard__sky--cloud-ten {
   left: 30%;
   top: 60em;
 }
-
 .vegard__sky .move {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
-
 .vegard__sky--sun {
   height: 10em;
   width: 10em;
@@ -371,16 +561,13 @@ body {
   left: 50%;
   top: 8em;
   position: relative;
-  -webkit-box-shadow: 0px 0px 56px 0px var(--sun);
-          box-shadow: 0px 0px 56px 0px var(--sun);
+  box-shadow: 0px 0px 56px 0px var(--sun);
 }
-
 .vegard__water {
   width: 100%;
   height: 200vh;
   position: relative;
 }
-
 .vegard__water--top {
   position: absolute;
   top: 0;
@@ -388,31 +575,25 @@ body {
   height: 25em;
   background-color: var(--water-top);
 }
-
 .vegard__water--bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--water-top)), to(#3434fa));
-  background-image: linear-gradient(var(--water-top), #3434fa);
+  background-image: linear-gradient(var(--water-top), rgb(52, 52, 250));
   position: absolute;
   top: 25em;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 .vegard__water--bottom p {
   top: 19.5em;
   left: 10%;
 }
-
 .vegard__water #wave-contaigner {
   width: 100%;
   overflow: hidden;
   position: absolute;
   top: -5em;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .vegard__water--wave {
   position: relative;
   display: inline;
@@ -422,49 +603,39 @@ body {
   fill: #4C7DDC;
   -webkit-animation: wave linear 5s infinite;
           animation: wave linear 5s infinite;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .vegard__water--boat {
   width: 40em;
   max-width: 100%;
   position: absolute;
   top: -14em;
   left: 10%;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
   z-index: 11;
   -webkit-animation: boat ease-in-out 2.5s infinite alternate;
           animation: boat ease-in-out 2.5s infinite alternate;
 }
-
 .vegard__water--fish {
   width: 30em;
   position: absolute;
-  top: 70em;
+  top: 60em;
   left: -28em;
   -webkit-animation: swim 12s linear infinite;
           animation: swim 12s linear infinite;
 }
-
 .vegard__water--fish #finn {
   -webkit-animation: lowerfinn ease-out 1s alternate infinite;
           animation: lowerfinn ease-out 1s alternate infinite;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   transform-box: fill-box;
 }
-
 .vegard__water--fish #butt {
   -webkit-animation: back 0.5s ease-in-out alternate infinite;
           animation: back 0.5s ease-in-out alternate infinite;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  transform-origin: right;
   transform-box: fill-box;
 }
-
 .vegard__water--fish .bubble-wrapper {
   width: 100px;
   height: 150px;
@@ -472,13 +643,11 @@ body {
   left: 23em;
   top: 0;
 }
-
 .vegard__water--fish .bubble-wrapper > div {
   background-color: #FFF;
   position: absolute;
   border-radius: 50px;
 }
-
 .vegard__water--fish .bubble-wrapper .bubble-1 {
   width: 10px;
   height: 10px;
@@ -487,7 +656,6 @@ body {
   -webkit-animation: bubbleOne 4s linear infinite;
           animation: bubbleOne 4s linear infinite;
 }
-
 .vegard__water--fish .bubble-wrapper .bubble-2 {
   width: 12px;
   height: 12px;
@@ -496,7 +664,6 @@ body {
   -webkit-animation: bubbleTwo 2s linear infinite;
           animation: bubbleTwo 2s linear infinite;
 }
-
 .vegard__water--fish .bubble-wrapper .bubble-3 {
   width: 8px;
   height: 8px;
@@ -506,4 +673,165 @@ body {
           animation: bubbleThree 3.5s linear infinite;
 }
 
-/*# sourceMappingURL=style.css.map */
+.vetle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.vetle-fishcontainer {
+  background-color: var(--first-water-color);
+  height: 115vh;
+  width: 100%;
+}
+.vetle-fishbubbles {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  left: 500px;
+  top: 660px;
+  -webkit-animation: fishswim linear 10s infinite;
+          animation: fishswim linear 10s infinite;
+}
+.vetle-fishbubbles > div {
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 50px;
+}
+.vetle-fishbubbles .fishbubble1 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble1 4s linear infinite;
+          animation: fishbubble1 4s linear infinite;
+}
+.vetle-fishbubbles .fishbubble2 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble2 4s linear infinite;
+          animation: fishbubble2 4s linear infinite;
+}
+.vetle-fishbubbles .fishbubble3 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble3 4s linear infinite;
+          animation: fishbubble3 4s linear infinite;
+}
+.vetle-fish {
+  position: relative;
+  width: 392px;
+  height: 196px;
+  left: 140px;
+  top: 527px;
+  -webkit-animation: fishswim 10s linear infinite;
+          animation: fishswim 10s linear infinite;
+}
+.vetle-octopuscontainer {
+  display: grid;
+  background-color: var(--second-water-color);
+  height: 115vh;
+  width: 100%;
+}
+.vetle p {
+  grid-column: 3;
+  grid-row: 2;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  max-width: 25ch;
+  align-items: center;
+}
+.vetle-octopusbubbles {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  left: 225px;
+  -webkit-animation: octopusbubbles 3s;
+          animation: octopusbubbles 3s;
+}
+.vetle-octopusbubbles > div {
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 50px;
+}
+.vetle-octopusbubbles .octopusbubble1 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble1 4s linear infinite;
+          animation: fishbubble1 4s linear infinite;
+}
+.vetle-octopusbubbles .octopusbubble2 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble2 4s linear infinite;
+          animation: fishbubble2 4s linear infinite;
+}
+.vetle-octopusbubbles .octopusbubble3 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: fishbubble3 4s linear infinite;
+          animation: fishbubble3 4s linear infinite;
+}
+.vetle-octopusbubbles .octopusbubble4 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: octopusbubble1 4s linear infinite;
+          animation: octopusbubble1 4s linear infinite;
+}
+.vetle-octopusbubbles .octopusbubble5 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: octopusbubble2 4s linear infinite;
+          animation: octopusbubble2 4s linear infinite;
+}
+.vetle-octopusbubbles .octopusbubble6 {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: octopusbubble3 4s linear infinite;
+          animation: octopusbubble3 4s linear infinite;
+}
+.vetle-octopus {
+  position: relative;
+  width: 456.82px;
+  height: 462.92px;
+  right: 450px;
+  top: 325px;
+  -webkit-animation: octopusflap 4s linear infinite;
+          animation: octopusflap 4s linear infinite;
+}
+.vetle-algaemain {
+  display: grid;
+  background-color: var(--third-water-color);
+  height: 115vh;
+  width: 100%;
+  overflow: hidden;
+}
+.vetle-algae {
+  position: relative;
+  width: 1000px;
+  height: 750px;
+  justify-self: center;
+  bottom: -550px;
+  -webkit-animation: algaewave 3s infinite;
+          animation: algaewave 3s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=index.css.map */
