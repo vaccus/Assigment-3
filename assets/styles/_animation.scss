@@ -39,7 +39,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(180vw);
+        transform: translateX(100vw);
     }
 }
 
@@ -61,22 +61,59 @@
     100% { bottom: 100%; left: 90%; opacity: 0 }
 }
 
-@keyframes fishbubbles {
-    to {
-        transform: translateX(250px)
-    }
+@keyframes fishbubble1 {
+    0% { bottom: 0; left: 30px; opacity: 0 }
+    50% { bottom: 50%; left: 30%; opacity: 1 }
+    100% { bottom: 100%; left: 80%; opacity: 0 }
 }
 
+@keyframes fishbubble2 {
+    0% { bottom: 10px; left: 5px; opacity: 0 }
+    50% { bottom: 40%; left: 60%; opacity: 1 }
+    100% { bottom: 90%; left: 90%; opacity: 0 }
+}
+
+@keyframes fishbubble3 {
+    0% { bottom: 30px; left: 15px; opacity: 0 }
+    50% { bottom: 30%; left: 50%; opacity: 1 }
+    100% { bottom: 100%; left: 90%; opacity: 0 }
+}
+
+@keyframes octopusbubble1 {
+    0% { bottom: 0; right: 15px; opacity: 0 }
+    50% { bottom: 50%; right: 30%; opacity: 1 }
+    100% { bottom: 100%; right: 80%; opacity: 0 }
+}
+
+@keyframes octopusbubble2 {
+    0% { bottom: 10px; right: 10px; opacity: 0 }
+    50% { bottom: 40%; right: 60%; opacity: 1 }
+    100% { bottom: 90%; right: 90%; opacity: 0 }
+}
+
+@keyframes octopusbubble3 {
+    0% { bottom: 30px; right: 25px; opacity: 0 }
+    50% { bottom: 30%; right: 50%; opacity: 1 }
+    100% { bottom: 100%; right: 90%; opacity: 0 }
+}
+
+
 @keyframes fishswim {
-    to {
-        transform: translateX(250px)
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
     }
 
 }
 
 @keyframes octopusbubbles {
-    to {
-        transform: translateY(-250px)
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-250px);
     }
 }
 
